@@ -1,3 +1,5 @@
 language: java
 sudo: false
 script: mvn clean verify
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t c35c0b76-d85c-4e4d-8429-3b0146725318

@@ -1,38 +1,19 @@
 package cleancode.crawler;
 
-import junit.framework.Test;
+import java.io.IOException;
+
 import junit.framework.TestCase;
-import junit.framework.TestSuite;
 
 /**
- * Unit test for simple WebCrawlerTest.
+ * 
+ * @author Neda Peyrone
+ *
  */
-public class WebCrawlerTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public WebCrawlerTest( String testName )
-    {
-        super( testName );
-    }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( WebCrawlerTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+public class WebCrawlerTest extends TestCase
+{   
+    public void testMain() throws IOException {
+        System.out.println("main");
+        String[] args = null;
+    		WebCrawler.main(args);
     }
 }
