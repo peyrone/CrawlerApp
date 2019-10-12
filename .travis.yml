@@ -2,9 +2,9 @@ language: java
 sudo: false
 script: mvn clean verify
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -t ${CODECOV_TOKEN}
   - mvn cobertura:cobertura
   - mvn coveralls:report -DrepoToken="${COVERALLS_TOKEN}"
+  - bash <(curl -s https://codecov.io/bash) -t ${CODECOV_TOKEN}
   - mvn clean
 env:
   global:
